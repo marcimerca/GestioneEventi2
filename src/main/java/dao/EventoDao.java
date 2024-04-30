@@ -20,11 +20,7 @@ public class EventoDao {
     }
 
     public Evento getById(int id){
-        EntityTransaction et = em.getTransaction();
-        et.begin();
-        Evento evento = em.find(Evento.class,id);
-        et.commit();
-        return evento;
+       return em.find(Evento.class,id);
 
     }
 
